@@ -13,4 +13,7 @@ describe DockingStation do
 		describe 'no bikes available error message'
 		it {expect {subject.release_bike}.to raise_error("No bikes available")}
 
+		describe 'dock is full'
+		it {expect {subject.dock_bike(Bike.new)}.to raise_error("Dock is full")if @bike}
+
 end

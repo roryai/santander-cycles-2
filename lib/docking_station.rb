@@ -2,11 +2,12 @@
 
 class DockingStation
 
-	def release_bike
+	def release
 			fail "No bikes available" unless @bike
+			@bike
 	end
 
-	def dock_bike(bike)
+	def dock(bike)
 			fail "Dock is full" if @bike
 			@bike = bike
 	end

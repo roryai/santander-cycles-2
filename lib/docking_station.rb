@@ -8,7 +8,7 @@ class DockingStation
 
 	def release
 			fail "No bikes available" if @bikes.count <= 0
-			@bikes
+			@bikes.pop
 	end
 
 	def dock(bike)
